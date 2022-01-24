@@ -11,7 +11,7 @@ import com.example.lesson02.model.Store;
 @Service
 public class StoreBO {
 	@Autowired
-	private StoreDAO storeDAO;
+	private StoreDAO storeDAO;	
 	
 	public List<Store> getStoreList() {
 		return storeDAO.selectStoreList();
