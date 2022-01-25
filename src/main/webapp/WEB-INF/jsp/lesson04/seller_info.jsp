@@ -9,11 +9,26 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <title>Insert title here</title>
+<style>
+	#title {
+		font-size: 3rem;
+		font-weight: bold;
+	}
+	#nickname {
+		font-size: 3.5rem;
+	}
+	#temperature {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+</style>
 </head>
 <body>
 	<div class="container">
-		<h3>${title}</h3>
+		<h3 id="title">${title}</h3>
 		<img src="${seller.getProfileImageUrl() }">
+		<p id="nickname">${seller.getNickname() }</p>
+		<p class="text-warning" id="temperature">${seller.getTemperature() }</p>
 	</div>
 </body>
 </html>

@@ -17,7 +17,7 @@
  		#{temperature}
  	)
  	</insert>
- 	<select id="getSeller">
+ 	<select id="getSeller" resultType="com.example.lesson04.model.Seller">
  	select
  		*
  	from 

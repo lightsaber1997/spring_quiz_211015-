@@ -20,7 +20,7 @@ public class Lesson04Quiz01Controller {
 	public String addSeller(
 			@RequestParam("nickname") String nickname,
 			@RequestParam("temperature") double temperature,
-			@RequestParam("profileImageUrl") String profileImageUrl) {
+			@RequestParam(value="profileImageUrl", required=false) String profileImageUrl) {
 		sellerBO.addSeller(nickname, temperature, profileImageUrl);
 		return "lesson04/afterAddSeller";
 	}
