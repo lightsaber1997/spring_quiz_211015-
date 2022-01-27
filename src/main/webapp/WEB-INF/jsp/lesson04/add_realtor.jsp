@@ -26,7 +26,7 @@
 			</div>
 			<div class="mb-3">
 				<label for="grade">등급</label>
-				<input type="text" name="grade" id="grade" class="form-control" placeholder="4.0">
+				<input type="text" name="grade" id="grade" class="form-control" placeholder="안심중개사">
 			</div>
 			<input type="submit" class="btn btn-primary">
 		</form>

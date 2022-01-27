@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.example.lesson04.dao.RealtorDAO">
+ 	<insert id="insertRealtor" parameterType="com.example.lesson04.model.Realtor" useGeneratedKeys="true" keyProperty="id">
+ 	insert into `realtor`
+ 	(
+ 		office,
+ 		phoneNumber,
+ 		address,
+ 		grade
+ 	)
+ 	values
+ 	(
+ 		#{office},
+ 		#{phoneNumber},
+ 		#{address},
+ 		#{grade}
+ 	)
+ 	
+ 	</insert>
+ 	
+ 	<select id="selectById" resultType="com.example.lesson04.model.Realtor">
+ 	select 
+ 		*
+ 	from
+ 		realtor
+ 	where
+ 		id = #{id}
+ 	</select>
+ </mapper>
