@@ -5,13 +5,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.lesson05.bo.MemberBO;
+
 @RequestMapping("/lesson05")
 @Controller
 public class Lesson05Controller {
+	@Autowired
+	private MemberBO memberBO;
+	
 	@RequestMapping("/p1")
 	public String prob1() {
 		return "lesson05/p1";
@@ -74,4 +80,38 @@ public class Lesson05Controller {
 		model.addAttribute("membership", membership);
 		return "lesson05/p2_1";
 	}
+	
+	@RequestMapping("/p3_0")
+	public String prob3_0(Model model) {
+		List<Integer> candidates = new ArrayList<>();
+		candidates.add(263001);
+		candidates.add(173942); 
+		candidates.add(563057); 
+		
+		double sum = 0;
+		for (int e: candidates) {
+			sum += e;
+		}
+		List<Double> percentages = new ArrayList<>();
+		for (int i = 0; i < candidates.size(); i++) {
+			percentages.add(candidates.get(i) / sum * 100);
+		}
+		List<String> percentages_ = new ArrayList<>();
+		for (int i = 0; i < candidates.size(); i++) {
+			String temp = String.format("%.0f", percentages.get(i));
+			percentages_.add(temp + "%");
+		}
+		model.addAttribute("candidates", candidates);
+		model.addAttribute("percentages_", percentages_);
+		return "lesson05/p3_0";
+	}
+	
+	@RequestMapping("/p4_0")
+	public String prob4(Model model) {
+		List<Member> members = memberBO.createMembers();
+		model.addAttribute("members", members);
+		return "lesson05/p4_0";
+	}
+	
+
 }
