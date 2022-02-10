@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-wrapper .header {
+  padding: 1.5em;
+  padding-left: 2%;
+  background-color: #2ac1bc;
+}
+.main-wrapper .header .title {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+.main-wrapper .main .title {
+  padding-left: 2%;
+  font-size: 3em;
+  margin-top: 0.1em;
+  margin-bottom: 0.5em;
+}
+.main-wrapper .main .data-card {
+  display: block;
+  margin-bottom: 2%;
+  border: 2px solid #2ac1bc;
+  border-radius: 15px;
+  padding: 2%;
+  padding-left: 1.5%;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+}
+.main-wrapper .main .data-card-store .data {
+  font-size: 1.3em;
+}
+.main-wrapper .main .data-card-store .data1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.main-wrapper .main .data-card-review .data {
+  font-size: 1.3em;
+}
+.main-wrapper .main .data-card-review .data1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.main-wrapper .main .data-card-review .data2 {
+  font-size: 0.9em;
+  color: dimgrey;
+}
+.main-wrapper .main .data-card-review .data3 {
+  margin-top: 18px;
+  margin-bottom: 13px;
+}
+.main-wrapper .main .data-card-review .data4 {
+  font-size: 0.93em;
+  display: inline-block;
+  background-color: #E8E8E8;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
+}
+.main-wrapper footer .flex-wrapper {
+  border-top: 1px solid lightgrey;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+}
+.main-wrapper footer .p1 {
+  font-size: 1.2em;
+}
+.main-wrapper footer .p2 {
+  color: grey;
+  font-size: 1.1em;
+}
+
+/*# sourceMappingURL=main.css.map */

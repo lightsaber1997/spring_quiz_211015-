@@ -8,15 +8,25 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.lesson02.bo.StoreBO;
+import com.example.lesson02.model.Store;
 import com.example.lesson05.bo.MemberBO;
+import com.example.lesson05.bo.NewReviewBO;
+import com.example.lesson05.model.NewReview;
 
 @RequestMapping("/lesson05")
 @Controller
 public class Lesson05Controller {
 	@Autowired
 	private MemberBO memberBO;
+	@Autowired
+	private StoreBO storeBO;
+	@Autowired
+	private NewReviewBO newReviewBO;
 	
 	@RequestMapping("/p1")
 	public String prob1() {
@@ -111,6 +121,24 @@ public class Lesson05Controller {
 		List<Member> members = memberBO.createMembers();
 		model.addAttribute("members", members);
 		return "lesson05/p4_0";
+	}
+	
+	@RequestMapping("/p6_0")
+	public String prob6(Model model) {
+		List<Store> result = storeBO.getStoreList();
+		model.addAttribute("result", result);
+		return "lesson05/p6_index";
+	}
+	
+	@GetMapping("/p6_1")
+	public String prob6_1(
+			@RequestParam("storeId") int storeId,
+			Model model) {
+		List<NewReview> result =  newReviewBO.selectByStoreId(storeId);
+		Store store = storeBO.selectById(storeId);
+		model.addAttribute("store", store);
+		model.addAttribute("result", result);
+		return "lesson05/p6_review";
 	}
 	
 

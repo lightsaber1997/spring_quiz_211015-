@@ -9,5 +9,14 @@
         FROM
             store
     </select>
+    
+    <select id="selectById"  resultType="com.example.lesson02.model.Store">
+        SELECT
+            *
+        FROM
+            store
+        WHERE
+        	id = #{id}
+    </select>
 
  </mapper>
