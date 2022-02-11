@@ -26,10 +26,11 @@ body {
 		
 		.back-button {
 			width: 4%;
+			min-width: 38px;
 			border: 1.2px solid pink;
 			cursor:  pointer;
 			border-radius: 12px;
-			padding: 5.5px;
+			padding: 5.5px;	
 			img {
 				width: 100%;
 			}

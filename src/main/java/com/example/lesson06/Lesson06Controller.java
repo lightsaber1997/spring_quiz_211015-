@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.example.lesson06.bo.BookingBO;
 import com.example.lesson06.bo.UrlBO;
+import com.example.lesson06.model.Booking;
 import com.example.lesson06.model.Url;
 
 @RequestMapping("/lesson06")
@@ -22,6 +24,8 @@ import com.example.lesson06.model.Url;
 public class Lesson06Controller {
 	@Autowired
 	UrlBO urlBO;
+	@Autowired
+	BookingBO bookingBO;
 	
 	@RequestMapping("/quiz01_add_view")
 	public String addView() {
@@ -88,5 +92,17 @@ public class Lesson06Controller {
 		List<Url> result = urlBO.selectAll();
 		model.addAttribute("result", result);
 		return "lesson06/table";
+	}
+	
+	@RequestMapping("/quiz03_index")
+	public String index_view(Model model) {
+		List<Booking> bookings = bookingBO.selectAll();
+		model.addAttribute("result", bookings);
+		return "lesson06/quiz03/index_view";
+	}
+	
+	@RequestMapping("/quiz03_layout")
+	public String testLayout(Model model) {
+		return "lesson06/quiz03/layout_main";
 	}
 }
