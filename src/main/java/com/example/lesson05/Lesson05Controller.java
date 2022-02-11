@@ -138,6 +138,8 @@ public class Lesson05Controller {
 		Store store = storeBO.selectById(storeId);
 		model.addAttribute("store", store);
 		model.addAttribute("result", result);
+		
+		
 		return "lesson05/p6_review";
 	}
 	

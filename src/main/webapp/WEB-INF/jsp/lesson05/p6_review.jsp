@@ -24,8 +24,9 @@
 </head>
 <body>
 	<div class="main-wrapper">
-		<div class="header d-flex align-items-center">
+		<div class="header d-flex align-items-center justify-content-between">
 			<div class="title">배달의 민족</div>
+			<div class="back-button"><img src="/images/lesson05/quiz06/turn-left-arrow.png"></div>
 		</div>
 		<div class="main">
 			<div class="title">${store.name } -  리뷰</div>
@@ -33,7 +34,28 @@
 				<c:when test="${not empty result }">
 					<c:forEach var="col" items="${result}" varStatus="status">
 					<a class="data-card data-card-review">
-						<div class="data data1">${col.userName }</div>
+						<div class="d-flex">
+							<div class="data data1">${col.userName }</div>
+							<div class="data data-star">
+								<c:forEach begin="1" end="5" varStatus="status">
+									<c:set var="temp" value = "${col.point - status.current}"/>
+									<c:choose>
+										<c:when test="${temp >= 0 }">
+											<img class="star-img" src="http://marondal.com/material/images/dulumary/web/jstl/star_fill.png">
+										</c:when>
+										<c:when test="${temp < 0 && temp > -1}">
+											<img class="star-img" src="http://marondal.com/material/images/dulumary/web/jstl/star_half.png">
+										</c:when>
+										
+										<c:otherwise>
+											<img class="star-img" src="http://marondal.com/material/images/dulumary/web/jstl/star_empty.png">
+										</c:otherwise>
+									</c:choose>
+									
+								</c:forEach>
+							</div>
+						</div>
+							
 						<fmt:formatDate var="createdAt_" value="${col.createdAt}" pattern="yyyy년 MM월 dd일"/>
 						<div class="data data2">${createdAt_}</div>
 						<div class="data data3">${col.review }</div>
@@ -42,8 +64,11 @@
 					</c:forEach>
 				</c:when>
 				<c:otherwise>
-					<div>
+					<div class="ttt1">
 						작성된 리뷰가 없습니다. 
+					</div>
+					<div class="ttt2">
+						<img src="/images/lesson05/quiz06/no-result.gif">
 					</div>
 				</c:otherwise>
 			</c:choose>

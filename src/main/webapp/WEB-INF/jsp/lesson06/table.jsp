@@ -54,8 +54,8 @@
 				success: function(data) {
 					console.log("success");
 					console.log(data);
-					
-					refresh_table(data);
+					location.reload();
+
 				},
 				error: function(e) {
 					console.log(e);
