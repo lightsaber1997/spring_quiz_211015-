@@ -1,0 +1,17 @@
+$color-main: darkorange;
+
+.main {
+	.title {
+		margin-top: 25px;
+		font-size: 2em;
+		letter-spacing: 0.1em;
+		text-align: center;
+	}
+	
+	.reservation_form {
+		#reservation_btn {
+			background-color: $color-main;
+			border-color: $color-main;
+		}
+	}
+}

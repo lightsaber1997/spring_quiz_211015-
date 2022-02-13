@@ -5,6 +5,7 @@ import java.util.Date;
 public class Booking {
 	private int id;
 	private String name;
+	private Date date;
 	private Integer num_days; 
 	private Integer num_guests;
 	private String phoneNumber;
@@ -58,6 +59,12 @@ public class Booking {
 	}
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
 	}
 	
 	

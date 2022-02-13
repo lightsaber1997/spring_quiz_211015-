@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.example.lesson06.dao.BookingDAO">
+    <select id="selectAll"  resultType="com.example.lesson06.model.Booking">
+        SELECT
+            *
+        FROM
+            `booking`
+    </select>
+    
+    <select id="selectById"  resultType="com.example.lesson06.model.Booking">
+        SELECT
+            *
+        FROM
+            store
+        WHERE
+        	id = #{id}
+    </select>
+	<insert id="insert" parameterType="map">
+		insert into 
+			`booking`
+		(`name`, `date`, `num_days`, `num_guests`, `phoneNumber`, `status`)
+		values
+			(#{name}, #{date}, #{num_days}, #{num_guests}, #{phoneNumber}, #{status})
+	</insert>
+	<select id="selectByPhoneNumber"  resultType="com.example.lesson06.model.Booking">
+        SELECT
+            *
+        FROM
+            `booking`
+        WHERE
+        	phoneNumber = #{phoneNumber}
+        order by 
+        	`date`
+    </select>
+    
+    <delete id="deleteById">
+    	delete from 
+    		`booking`
+    	where
+    		`id` = #{id}
+    </delete>
+ </mapper>

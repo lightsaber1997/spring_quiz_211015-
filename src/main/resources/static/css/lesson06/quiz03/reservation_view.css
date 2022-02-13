@@ -1,0 +1,12 @@
+.main .title {
+  margin-top: 25px;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.main .reservation_form #reservation_btn {
+  background-color: darkorange;
+  border-color: darkorange;
+}
+
+/*# sourceMappingURL=reservation_view.css.map */

@@ -1,0 +1,26 @@
+.main .main-img {
+  display: block;
+  width: 100%;
+}
+.main .content1 {
+  height: 250px;
+  background-color: brown;
+  color: white;
+}
+.main .content1 .ppp1 {
+  background-color: #a44200;
+  font-size: 2em;
+}
+.main .content1 .ppp2 {
+  background-color: #8d6e63;
+  font-size: 1.3em;
+}
+.main .content1 .ppp2 .temp1 {
+  padding-bottom: 5px;
+}
+.main .content1 .ppp3 {
+  background-color: #a44200;
+  font-size: 2em;
+}
+
+/*# sourceMappingURL=main_view.css.map */
