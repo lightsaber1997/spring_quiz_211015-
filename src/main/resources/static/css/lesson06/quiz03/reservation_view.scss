@@ -1,5 +1,12 @@
 $color-main: darkorange;
-
+.main-wrapper-wrapper {
+	display: flex;
+	justify-content: center;
+	.main-wrapper {
+		width: 80%;
+	}
+	
+}
 .main {
 	.title {
 		margin-top: 25px;

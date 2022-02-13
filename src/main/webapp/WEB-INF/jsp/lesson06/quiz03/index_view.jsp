@@ -31,7 +31,15 @@
     					<td>${col.num_days }</td>
     					<td>${col.num_guests }</td>
     					<td>${col.phoneNumber }</td>
-    					<td>${col.status }</td>
+    					<c:choose>
+    						<c:when test="${col.status } eq '대기중'">
+    							<td class="text-primary">${col.status }</td>
+    						</c:when>
+    						<c:otherwise>
+    							<td class="text-success">${col.status }</td>
+    						</c:otherwise>
+    					</c:choose>
+    					
     					<td><button class="delete-btn btn btn-danger" data-id="${col.id }">삭제</button></td>
     				</tr>
     			</c:forEach>

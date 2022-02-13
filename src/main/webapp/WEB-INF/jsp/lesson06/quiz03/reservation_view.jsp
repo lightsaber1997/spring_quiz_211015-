@@ -14,38 +14,44 @@
       </script>
     </jsp:attribute>
     <jsp:body>
-    	<h1 class="title">
-    		예약하기
-    	</h1>
-    	<div>
-    		<form class="reservation_form">
-    			<div class="mb-3">
-				  <label  class="form-label">이름</label>
-				  <input type="email" class="form-control" name="name">
-				</div>
-				<div class="mb-3">
-				  <label  class="form-label">예약날짜</label>
-				  <input type="text" class="form-control" id="datepicker" name="date">
-				</div>
-				<div class="mb-3">
-				  <label  class="form-label">숙박일수</label>
-				  <input type="email" class="form-control" name="num_days">
-				</div>
-				<div class="mb-3">
-				  <label  class="form-label">숙박인원</label>
-				  <input type="email" class="form-control" name="num_guests">
-				</div>
-				<div class="mb-3">
-				  <label  class="form-label">전화번호</label>
-				  <input type="email" class="form-control" name="phoneNumber" placeholder="예) 010-1111-2301">
-				</div>
-				<div class="d-grid gap-2">
-					<button type="button" id="reservation_btn" class="btn btn-primary">예약하기</button>
-				</div>
-				
-    		
-    		</form>
+    	<div class="main-wrapper-wrapper">
+    		<div class="main-wrapper">
+	    		<h1 class="title">
+		    		예약하기
+		    	</h1>
+		    	<div>
+		    		<form class="reservation_form">
+		    			<div class="mb-3">
+						  <label  class="form-label">이름</label>
+						  <input type="email" class="form-control" name="name">
+						</div>
+						<div class="mb-3">
+						  <label  class="form-label">예약날짜</label>
+						  <input type="text" class="form-control" id="datepicker" name="date">
+						</div>
+						<div class="mb-3">
+						  <label  class="form-label">숙박일수</label>
+						  <input type="email" class="form-control" name="num_days">
+						</div>
+						<div class="mb-3">
+						  <label  class="form-label">숙박인원</label>
+						  <input type="email" class="form-control" name="num_guests">
+						</div>
+						<div class="mb-3">
+						  <label  class="form-label">전화번호</label>
+						  <input type="email" class="form-control" name="phoneNumber" placeholder="예) 010-1111-2301">
+						</div>
+						<div class="d-grid gap-2">
+							<button type="button" id="reservation_btn" class="btn btn-primary">예약하기</button>
+						</div>
+						
+		    		
+		    		</form>
+		    	</div>
+	    	</div>
     	</div>
+	    	
+	    	
     </jsp:body>
     
     
